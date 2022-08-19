@@ -13,27 +13,23 @@ public class Main {
         Map<Character, Integer> map = new HashMap<>();
         text = text.toLowerCase();
         for (int i = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            /*if (c==' '|| c==','|| c=='.'){
-                continue;
-            }*/
-            if (!Character.isAlphabetic(c)) {
+            char character = text.charAt(i);
+
+            if (!Character.isAlphabetic(character)) {
                 continue;
             }
 
-            if (!map.containsKey(c)) {
-                map.put(c, 1);
+            if (!map.containsKey(character)) {
+                map.put(character, 1);
             } else {
-                int value = map.get(c);
+                int value = map.get(character);
                 value++;
-                map.put(c, value);
+                map.put(character, value);
             }
         }
         int maxValue = -1;
         char maxChar = ' ';
-        for (Character character : map.keySet()) {
 
-        }
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             if (entry.getValue() > maxValue) {
                 maxChar = entry.getKey();
