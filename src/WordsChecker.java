@@ -10,9 +10,6 @@ public class WordsChecker {
 
     public boolean hasWord(String word) {
         List<String> list = Arrays.asList(text.split("\\P{IsAlphabetic}+"));
-        if (list.contains(word)) {
-            return true;
-        }
-        return false;
+        return list.contains(word);
     }
 }

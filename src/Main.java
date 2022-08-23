@@ -27,15 +27,21 @@ public class Main {
                 map.put(character, value);
             }
         }
-        int maxValue = -1;
+        int maxValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE;
         char maxChar = ' ';
-
+        char minChar = ' ';
         for (Map.Entry<Character, Integer> entry : map.entrySet()) {
             if (entry.getValue() > maxValue) {
                 maxChar = entry.getKey();
                 maxValue = entry.getValue();
             }
+            if (entry.getValue() < minValue) {
+                minChar = entry.getKey();
+                minValue = entry.getValue();
+            }
         }
+        System.out.println(minChar);
         System.out.println(maxChar);
     }
 }
