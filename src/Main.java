@@ -18,7 +18,6 @@ public class Main {
             if (!Character.isAlphabetic(character)) {
                 continue;
             }
-
             if (!map.containsKey(character)) {
                 map.put(character, 1);
             } else {
